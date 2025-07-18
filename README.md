@@ -6,7 +6,7 @@ NASA Mission Control is a full-stack web application focused on simulating space
 
 ---
 
-## 🌐 Live Demo
+### 🌐 Live Demo
 
 <!-- Replace with actual GIF or hosted link -->
 ![Working Demo](images/demo.gif)
@@ -14,7 +14,7 @@ NASA Mission Control is a full-stack web application focused on simulating space
 ---
 
 
-#### 📸 UI Preview
+### 📸 UI Preview
 
 ![Frontend View](images/Launch.png)
 
@@ -95,7 +95,7 @@ The frontend is built with **React** and **react-router-dom** for navigation bet
 
 ---
 
-## 🚧 Work in Progress
+### 🚧 Work in Progress
 
 - [ ] Implement database for **data persistence**
 - [ ] Add authentication and **security features**
