@@ -101,7 +101,7 @@ This project is inspired by existing projects, real-world space mission control 
 
 ---
 
-## This project is under development and not yet licensed. Stay tuned.
+## This project is currently under development.
 
 ---
 
