@@ -13,7 +13,6 @@ NASA Mission Control is a full-stack web application focused on simulating space
 
 ---
 
-
 ### 📸 UI Preview
 
 ![Frontend View](images/Launch.png)
@@ -44,12 +43,23 @@ The backend is built with **Node.js** and **Express**, focusing on RESTful APIs 
 
 #### 📸 Insomnia API Testing
 
-| Test Type | Screenshot |
-|----------|------------|
-| GET /planets | ![GET Planets](images/Insomnia-get-planets.png) |
-| POST /launches | ![POST Launch](images/Insomnia-post-launch.png) |
-| Get /planets/ | ![DELETE Launch](images/Insomnia-get-planets.png) |
+| Test Type        | Screenshot                                 |
+|------------------|--------------------------------------------|
+| GET /planets     | ![GET Planets](images/Insomnia-get-planets.png) |
+| POST /launches   | ![POST Launch](images/Insomnia-post-launch.png) |
+| GET /planets/    | ![DELETE Launch](images/Insomnia-get-planets.png) |
 
+#### 🚀 Performance Optimization with PM2
+
+To simulate multi-core performance and handle load efficiently, the backend now supports **PM2 Clustering**.
+
+- PM2 automatically forks multiple instances of the server based on available CPU cores.
+- This helps test concurrent request handling, resilience, and resource utilization in a production-like environment.
+
+📸 PM2 Cluster Mode in Action:
+
+![PM2 Cluster](images/pm2_clustering.png)
+> 🔧 I understand this causes concurrency issues with current version of code having MAP in the same server that it uses for storage of laucnches data. But this will go away once I add persistence to the code, which I will add soon or rather next.
 ---
 
 ### 🔺 Frontend (React)
@@ -66,11 +76,11 @@ The frontend is built with **React** and **react-router-dom** for navigation bet
 
 > ⚠️ Note: The current frontend is temporary and inspired by other projects. A complete redesign is planned.
 
+---
 
 # 🚧 Architectural Diagram  
 
 ![Architectural diagram](images/Architectural-Diagram.png)
-
 
 ---
 
@@ -81,17 +91,18 @@ The frontend is built with **React** and **react-router-dom** for navigation bet
 - View upcoming and historical launches.
 - Abort missions before launch if needed.
 - API tested and developed using **Insomnia**.
+- Simulated performance using **PM2 clustering**.
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Stack      | Tools & Libraries                     |
-|------------|----------------------------------------|
-| **Backend** | Node.js, Express, CSV Parser          |
-| **Frontend** | React, React Router DOM               |
-| **Testing** | Insomnia (API Testing)                |
-| **Data**    | NASA Kepler Exoplanet Archive (CSV)   |
+| Stack        | Tools & Libraries                             |
+|--------------|------------------------------------------------|
+| **Backend**  | Node.js, Express, CSV Parser, **PM2**          |
+| **Frontend** | React, React Router DOM                        |
+| **Testing**  | Insomnia (API Testing)                         |
+| **Data**     | NASA Kepler Exoplanet Archive (CSV)           |
 
 ---
 
@@ -111,7 +122,4 @@ This project is inspired by existing projects, real-world space mission control 
 ---
 
 ## This project is currently under development.
-
----
-
 
