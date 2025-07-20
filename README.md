@@ -43,7 +43,7 @@ The backend is built with **Node.js**, **Express**, and now includes **MongoDB p
 >    ```env
 >    MONGO_URL="your-mongodb-connection-uri"
 >    ```
-> 3. If you need access to the MongoDB cluster or API keys, feel free to reach out to me via [LinkedIn](https://linkedin.com/in/srijan-petwal), [X (Twitter)](https://x.com/srijancs), or by raising an issue in the repo.
+> 3. If you need access to the MongoDB cluster or API keys, feel free to reach out via [LinkedIn](https://linkedin.com/in/srijan-petwal), [X (Twitter)](https://x.com/srijancs), or by opening an issue in this GitHub repo.
 
 ---
 
@@ -68,13 +68,13 @@ To simulate multi-core performance and handle load efficiently, the backend supp
 
 ![PM2 Cluster](images/pm2_clustering.png)
 
-> 🔧 **Note:** Current concurrency issues with in-memory state (`Map`) will be resolved as persistence is now being integrated.
+> 🔧 **Note:** The current version still has concurrency issues due to in-memory use of `Map` for storing launch data. These issues will be resolved as persistence (MongoDB) is now being integrated.
 
 ---
 
 ### 🔺 Frontend (React)
 
-The frontend is built using **React** and **react-router-dom** for routing between mission control views.
+The frontend is built using **React** and **react-router-dom** for navigation between mission control views.
 
 #### Frontend Routes:
 
@@ -84,7 +84,7 @@ The frontend is built using **React** and **react-router-dom** for routing betwe
 | `/upcoming`    | View all scheduled and pending launches   |
 | `/history`     | View history of successful and aborted launches |
 
-> ⚠️ A complete **UI/UX redesign** is planned in the next phase.
+> ⚠️ A complete **UI/UX redesign** is planned.
 
 ---
 
@@ -111,23 +111,36 @@ The frontend is built using **React** and **react-router-dom** for routing betwe
 
 ---
 
+## 🧱 Architectural Diagram
+
+![Architectural diagram](images/Architectural-Diagram-Updated.png)
+
+---
+
 ## 🧠 Inspiration & Focus
 
-Inspired by real-world space control systems and modern backend architecture. Emphasis is on **clean architecture**, **API design**, and **full-stack production-readiness**.
+Inspired by real-world space mission control systems and modern backend architecture. This project emphasizes:
+
+- Modular backend architecture
+- API-first development
+- Frontend-backend integration via REST
+- Optimizing deployment and performance workflows
 
 ---
 
 ## 🚧 Work in Progress
 
 - [x] Add MongoDB data persistence with Mongoose
-- [ ] Add authentication and security
+- [ ] Add authentication and security features
 - [ ] Redesign frontend UI from scratch
-- [ ] Add comprehensive tests (unit & integration)
+- [ ] Add unit and integration tests
+- [ ] Improve error handling and validation
+- [ ] Replace in-memory storage logic fully with DB logic
 
 ---
 
 ## 🚀 Project Status
 
-This project is currently **under development** with a focus on backend scalability and frontend revamp.
+This project is actively being developed, with a current focus on **scalability**, **persistent storage**, and **clean architecture**.
 
 ---
