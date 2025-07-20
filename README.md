@@ -2,7 +2,7 @@
 
 NASA Mission Control is a full-stack web application focused on simulating space mission planning and control. Built with a **Node.js Express backend** and a **React frontend**, it allows users to schedule space launches to habitable exoplanets, view upcoming missions, and review past launches.
 
-> 🔧 **Project is under development** – security, data persistence, and a frontend redesign are in progress.
+> 🔧 **Project is under development** – frontend redesign and full DB integration are ongoing.
 
 ---
 
@@ -21,9 +21,9 @@ NASA Mission Control is a full-stack web application focused on simulating space
 
 ## 📁 Project Structure
 
-### 🔻 Backend (Express.js)
+### 🔻 Backend (Express.js + MongoDB)
 
-The backend is built with **Node.js** and **Express**, focusing on RESTful APIs for managing planetary data and launch scheduling.
+The backend is built with **Node.js**, **Express**, and now includes **MongoDB persistence using Mongoose**. RESTful APIs are used for managing planetary data and launch scheduling.
 
 #### Key Backend Routes:
 
@@ -34,39 +34,47 @@ The backend is built with **Node.js** and **Express**, focusing on RESTful APIs 
 | `/launches`        | POST   | Schedule a new launch                |
 | `/launches/:id`    | DELETE | Abort a launch by ID                 |
 
-- Uses `kepler_data.csv` from NASA’s [Kepler Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/) to filter **habitable planets**.
+- Planetary data sourced from NASA’s [Kepler Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/).
+- All launch and planet data now persist in **MongoDB Atlas** via **Mongoose** ODM.
 
-- Backend tested using **Insomnia**:
-  - ✅ `GET` for planets and launches
-  - ✅ `POST` to schedule new launches
-  - ✅ `DELETE` to abort launches
+> ⚙️ **To connect to the database** after forking the project:
+> 1. Create a `.env` file inside the `server/` folder.
+> 2. Add the following line:
+>    ```env
+>    MONGO_URL="your-mongodb-connection-uri"
+>    ```
+> 3. If you need access to the MongoDB cluster or API keys, feel free to reach out to me via [LinkedIn](https://linkedin.com/in/srijanpetwal), [X (formerly Twitter)](https://x.com/yourhandle), or by raising an issue in the repo.
+
+---
 
 #### 📸 Insomnia API Testing
 
-| Test Type        | Screenshot                                 |
-|------------------|--------------------------------------------|
+| Test Type        | Screenshot                                       |
+|------------------|--------------------------------------------------|
 | GET /planets     | ![GET Planets](images/Insomnia-get-planets.png) |
 | POST /launches   | ![POST Launch](images/Insomnia-post-launch.png) |
-| GET /planets/    | ![DELETE Launch](images/Insomnia-get-planets.png) |
+| DELETE /launches | ![DELETE Launch](images/Insomnia-get-planets.png) |
 
-
+---
 
 #### 🚀 Performance Optimization with PM2
 
-To simulate multi-core performance and handle load efficiently, the backend now supports **PM2 Clustering**.
+To simulate multi-core performance and handle load efficiently, the backend supports **PM2 Clustering**.
 
-- PM2 automatically forks multiple instances of the server based on available CPU cores.
-- This helps test concurrent request handling, resilience, and resource utilization in a production-like environment.
+- PM2 forks multiple instances based on CPU cores.
+- Helps simulate concurrent requests in a production-like setup.
 
 📸 PM2 Cluster Mode in Action:
 
 ![PM2 Cluster](images/pm2_clustering.png)
-> 🔧 I understand this causes concurrency issues with current version of code having MAP in the same server that it uses for storage of laucnches data. But this will go away once I add persistence to the code, which I will add soon or rather next.
+
+> 🔧 **Note:** Current concurrency issues with in-memory state (`Map`) will be resolved as persistence is now being integrated.
+
 ---
 
 ### 🔺 Frontend (React)
 
-The frontend is built with **React** and **react-router-dom** for navigation between mission control views.
+The frontend is built using **React** and **react-router-dom** for routing between mission control views.
 
 #### Frontend Routes:
 
@@ -76,52 +84,50 @@ The frontend is built with **React** and **react-router-dom** for navigation bet
 | `/upcoming`    | View all scheduled and pending launches   |
 | `/history`     | View history of successful and aborted launches |
 
-> ⚠️ Note: The current frontend is temporary and inspired by other projects. A complete redesign is planned.
-
----
-
-# 🚧 Architectural Diagram  
-
-![Architectural diagram](images/Architectural-Diagram.png)
+> ⚠️ A complete **UI/UX redesign** is planned in the next phase.
 
 ---
 
 ## 🔍 Features
 
-- Filter habitable planets based on scientific data from NASA.
-- Schedule new space launches to those planets.
+- Filter habitable planets based on real NASA scientific data.
+- Schedule new space launches with validated input.
 - View upcoming and historical launches.
-- Abort missions before launch if needed.
-- API tested and developed using **Insomnia**.
-- Simulated performance using **PM2 clustering**.
+- Abort missions pre-launch.
+- Persistent backend storage using **MongoDB + Mongoose**.
+- Performance optimization via **PM2 clustering**.
+- API tested using **Insomnia**.
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Stack        | Tools & Libraries                             |
-|--------------|------------------------------------------------|
-| **Backend**  | Node.js, Express, CSV Parser, **PM2**          |
-| **Frontend** | React, React Router DOM                        |
-| **Testing**  | Insomnia (API Testing)                         |
-| **Data**     | NASA Kepler Exoplanet Archive (CSV)           |
-
----
-
-### 🚧 Work in Progress
-
-- [ ] Implement database for **data persistence**
-- [ ] Add authentication and **security features**
-- [ ] Redesign frontend UI/UX from scratch
-- [ ] Add unit and integration tests
+| Layer         | Tools & Libraries                                   |
+|---------------|------------------------------------------------------|
+| **Backend**   | Node.js, Express, Mongoose, MongoDB Atlas, PM2       |
+| **Frontend**  | React, React Router DOM                              |
+| **Testing**   | Insomnia (API Testing)                               |
+| **Data**      | NASA Kepler Exoplanet Archive (CSV)                  |
 
 ---
 
 ## 🧠 Inspiration & Focus
 
-This project is inspired by existing projects, real-world space mission control systems and is mainly focused on backend-focused engineering practices.
+Inspired by real-world space control systems and modern backend architecture. Emphasis is on **clean architecture**, **API design**, and **full-stack production-readiness**.
 
 ---
 
-## This project is currently under development.
+## 🚧 Work in Progress
 
+- [x] Add MongoDB data persistence with Mongoose
+- [ ] Add authentication and security
+- [ ] Redesign frontend UI from scratch
+- [ ] Add comprehensive tests (unit & integration)
+
+---
+
+## 🚀 Project Status
+
+This project is currently **under development** with a focus on backend scalability and frontend revamp.
+
+---
