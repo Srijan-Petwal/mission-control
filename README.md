@@ -43,7 +43,7 @@ The backend is built with **Node.js**, **Express**, and now includes **MongoDB p
 >    ```env
 >    MONGO_URL="your-mongodb-connection-uri"
 >    ```
-> 3. If you need access to the MongoDB cluster or API keys, feel free to reach out to me via [LinkedIn](https://linkedin.com/in/srijanpetwal), [X (formerly Twitter)](https://x.com/yourhandle), or by raising an issue in the repo.
+> 3. If you need access to the MongoDB cluster or API keys, feel free to reach out to me via [LinkedIn](https://linkedin.com/in/srijan-petwal), [X (Twitter)](https://x.com/srijancs), or by raising an issue in the repo.
 
 ---
 
