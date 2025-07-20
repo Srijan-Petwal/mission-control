@@ -1,4 +1,5 @@
 //const getAllLaunches = require("../routes/launches/launches.controller");
+//const launches=require('./launches.mongo')
 
 const launches=new Map();
 let latestFlightNumber=100
@@ -15,7 +16,7 @@ const launch={
 };
 
 function getAllLaunches(){
-    return Array.from(launches.values( ))
+    return Array.from(launches.values({} ))
 }
 function launchExists(id){
     return launches.has(id)
