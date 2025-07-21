@@ -68,7 +68,7 @@ To simulate multi-core performance and handle load efficiently, the backend supp
 
 ![PM2 Cluster](images/pm2_clustering.png)
 
-> 🔧 **Note:** The current version still has concurrency issues due to in-memory use of `Map` for storing launch data. These issues will be resolved as persistence (MongoDB) is now being integrated.
+> ~🔧 **Note:** The current version still has concurrency issues due to in-memory use of `Map` for storing launch data. These issues will be resolved as persistence (MongoDB) is now being integrated.~ Issue Resolved!!!
 
 ---
 
@@ -135,7 +135,7 @@ Inspired by real-world space mission control systems and modern backend architec
 - [ ] Redesign frontend UI from scratch
 - [ ] Add unit and integration tests
 - [ ] Improve error handling and validation
-- [ ] Replace in-memory storage logic fully with DB logic
+- [x] Replace in-memory storage logic fully with DB logic
 
 ---
 
