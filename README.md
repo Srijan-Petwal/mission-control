@@ -159,6 +159,6 @@ Inspired by real-world space mission control systems and modern backend architec
 
 ## 🚀 Project Status
 
-This project is actively being developed, with a current focus on **scalability**, **persistent storage**, and **clean architecture**.
+This project is actively being developed, with a current focus on **scalability**, ~**persistent storage**~, and **clean architecture**.
 
 ---
