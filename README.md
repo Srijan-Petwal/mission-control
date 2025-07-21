@@ -2,7 +2,7 @@
 
 NASA Mission Control is a full-stack web application focused on simulating space mission planning and control. Built with a **Node.js Express backend** and a **React frontend**, it allows users to schedule space launches to habitable exoplanets, view upcoming missions, and review past launches.
 
-> 🔧 **Project is under development** – frontend redesign and full DB integration are ongoing.
+> 🔧 **Project is under development** – frontend redesign and ~full DB integration are ongoing~.
 
 ---
 
