@@ -100,6 +100,22 @@ The frontend is built using **React** and **react-router-dom** for navigation be
 
 ---
 
+### 🧩 MongoDB Collections Preview
+
+To verify persistence, here are sample screenshots from the live MongoDB Atlas database showing both the `launches` and `planets` collections populated via API operations:
+
+#### 🚀 Launches Collection
+
+![MongoDB Launches Collection](images/mongo-launches.png)
+
+#### 🌍 Planets Collection
+
+![MongoDB Planets Collection](images/mongo-planets.png)
+
+> These screenshots reflect real-time data stored in MongoDB using Mongoose models. API operations such as GET, POST, and DELETE update these collections directly.
+
+---
+
 ## 🛠️ Technologies Used
 
 | Layer         | Tools & Libraries                                   |
