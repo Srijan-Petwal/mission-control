@@ -112,7 +112,9 @@ To verify persistence, here are sample screenshots from the live MongoDB Atlas d
 
 ![MongoDB Planets Collection](images/mongo-planets.png)
 
-> These screenshots reflect real-time data stored in MongoDB using Mongoose models. API operations such as GET, POST, and DELETE update these collections directly.
+> These screenshots reflect real-time data stored in MongoDB using Mongoose models. API operations such as GET, POST, and DELETE update these collections directly. 
+>Also everything here is mock data, and there's no sensitive information exposed. I always double-check what I upload to make sure it's safe and clean before committing or sharing.🙂 
+
 
 ---
 
