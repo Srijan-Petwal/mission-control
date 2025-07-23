@@ -6,22 +6,22 @@ const axios=require('axios')
 
 const DEFAULT_FLIGHT_NUMBER=100;
 
-const launch={
-    flightNumber:100,
-    mission:'Kepler Exploration X',
-    rocket:'SpaceX Relite XzeA',
-    launchDate:new Date('2030-12-11'), // 12 December 2030
-    target:'Kepler-442 b',
-    customers:['XaAe','ISRO'],
-    upcoming:true,
-    success:true
+// const launch={
+//     flightNumber:100,
+//     mission:'Kepler Exploration X',
+//     rocket:'SpaceX Relite XzeA',
+//     launchDate:new Date('2030-12-11'), // 12 December 2030
+//     target:'Kepler-442 b',
+//     customers:['XaAe','ISRO'],
+//     upcoming:true,
+//     success:true
 
-};
+// };
 
 
-saveLaunch(launch)
+// saveLaunch(launch)
 
-const SPACEX_API_URL="https://api.spacexdata.com/v4/launches/query"
+const SPACEX_API_URL="https://api.spacexdata.com/v5/launches/query"
 
 async function populateLaunches(){
      console.log('Launch Data fetchin...')
@@ -67,7 +67,7 @@ async function populateLaunches(){
             upcoming:launchDoc.upcoming,
             success:launchDoc.success
         }
-       // console.log(`${launch.flightNumber}-->${launch.mission}`)
+        console.log(`${launch.flightNumber}-->${launch.mission}`)
         await saveLaunch(launch)
     }
     
@@ -95,9 +95,13 @@ async function findLaunch(filter) {
     return await launchesDatabase.findOne(filter)
 }
 
-async function getAllLaunches(){
+async function getAllLaunches(skip,limit){
    // return Array.from(launches.values({} ))
-   return await launchesDatabase.find({},{"_id":0, "__v":0})
+   return await launchesDatabase
+   .find({},{"_id":0, "__v":0})
+   .sort({flightNumber:1})
+   .skip(skip)
+   .limit(limit);
 }
 async function launchExists(id){
     //return launches.has(id)
