@@ -1,5 +1,6 @@
 const http=require('http')
 const mongoose=require('mongoose')
+
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
@@ -7,7 +8,7 @@ const app=require('./app');
 
 
 const {loadPlanetsData}=require('./models/planets.model')
-
+const {loadLaunchesData}=require('./models/launches.model')
 
 const PORT=process.env.PORT || 8000;
 
@@ -26,6 +27,7 @@ async function serverStart(){
         useUnifiedTopology:true
     })
     await loadPlanetsData();
+    await loadLaunchesData();
 
     server.listen(PORT,()=>{    
         console.log("Port is",PORT)

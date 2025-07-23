@@ -100,6 +100,18 @@ The frontend is built using **React** and **react-router-dom** for navigation be
 
 ---
 
+## 🌌 SpaceX Launches Integration
+
+The History section now features real-time data from **SpaceX launches** using the awesome [SpaceX API](https://github.com/r-spacex/SpaceX-API). All previous launches by SpaceX are fetched and rendered on the frontend!
+
+| API Testing Snapshot | SpaceX Launch Data Rendered | Populated SpaceX Launch History Demo |
+|----------------------|-----------------------------|----------------------|
+| ![SpaceX API Test](images/Insomnia-spaceX-api-testing.png) | ![SpaceX Integration](images/spaceX-api-integrated.png) | ![SpaceX Demo](images/demo-launch-history.gif) |
+
+> This integration allows you to explore real historical space launches alongside your custom scheduled ones. Super cool if you love spaceflight history as much as I do! 😄
+
+---
+
 ### 🧩 MongoDB Collections Preview
 
 To verify persistence, here are sample screenshots from the live MongoDB Atlas database showing both the `launches` and `planets` collections populated via API operations:
@@ -112,9 +124,8 @@ To verify persistence, here are sample screenshots from the live MongoDB Atlas d
 
 ![MongoDB Planets Collection](images/mongo-planets.png)
 
-> These screenshots reflect real-time data stored in MongoDB using Mongoose models. API operations such as GET, POST, and DELETE update these collections directly. 
->Also everything here is mock data, and there's no sensitive information exposed. I always double-check what I upload to make sure it's safe and clean before committing or sharing.😄
-
+> These screenshots reflect real-time data stored in MongoDB using Mongoose models. API operations such as GET, POST, and DELETE update these collections directly.  
+> Also everything here is mock data, and there's no sensitive information exposed. I always double-check what I upload to make sure it's safe and clean before committing or sharing.😄
 
 ---
 
@@ -139,21 +150,22 @@ To verify persistence, here are sample screenshots from the live MongoDB Atlas d
 
 Inspired by real-world space mission control systems and modern backend architecture. This project emphasizes:
 
-- Modular backend architecture
-- API-first development
-- Frontend-backend integration via REST
-- Optimizing deployment and performance workflows
+- Modular backend architecture  
+- API-first development  
+- Frontend-backend integration via REST  
+- Optimizing deployment and performance workflows  
 
 ---
 
 ## 🚧 Work in Progress
 
-- [x] Add MongoDB data persistence with Mongoose
-- [ ] Add authentication and security features
-- [ ] Redesign frontend UI from scratch
-- [ ] Add unit and integration tests
-- [ ] Improve error handling and validation
-- [x] Replace in-memory storage logic fully with DB logic
+- [x] Add MongoDB data persistence with Mongoose  
+- [x] Integrate SpaceX Launch History API  
+- [ ] Add authentication and security features  
+- [ ] Redesign frontend UI from scratch  
+- [ ] Add unit and integration tests  
+- [ ] Improve error handling and validation  
+- [x] Replace in-memory storage logic fully with DB logic  
 
 ---
 
