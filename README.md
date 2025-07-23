@@ -104,9 +104,12 @@ The frontend is built using **React** and **react-router-dom** for navigation be
 
 The History section now features real-time data from **SpaceX launches** using the awesome [SpaceX API](https://github.com/r-spacex/SpaceX-API). All previous launches by SpaceX are fetched and rendered on the frontend!
 
-| API Testing Snapshot | SpaceX Launch Data Rendered | Populated SpaceX Launch History Demo |
-|----------------------|-----------------------------|----------------------|
-| ![SpaceX API Test](images/Insomnia-spaceX-api-testing.png) | ![SpaceX Integration](images/spaceX-api-integrated.png) | ![SpaceX Demo](images/demo-launch-history.gif) |
+| API Testing Snapshot | SpaceX Launch Data Rendered | 
+|----------------------|-----------------------------|
+| ![SpaceX API Test](images/Insomnia-spaceX-api-testing.png) | ![SpaceX Integration](images/spaceX-api-integrated.png) |
+
+## Populated SpaceX Launch History: Demo 
+![SpaceX Demo](images/demo-launch-history.gif) 
 
 > This integration allows you to explore real historical space launches alongside your custom scheduled ones. Super cool if you love spaceflight history as much as I do! 😄
 
