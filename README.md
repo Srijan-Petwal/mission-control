@@ -2,6 +2,7 @@
 
 Mission Control is a full-stack web application focused on simulating space mission planning and control. Built with a **Node.js Express backend** and a **React frontend**, it allows users to schedule space launches to habitable exoplanets, view upcoming missions, and review past launches.
 
+>[!NOTE]
 > 🔧 **Project is under development** – frontend redesign and ~full DB integration are ongoing~.
 
 ---
@@ -37,6 +38,7 @@ The backend is built with **Node.js**, **Express**, and now includes **MongoDB p
 - Planetary data sourced from NASA’s [Kepler Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/).
 - All launch and planet data now persist in **MongoDB Atlas** via **Mongoose** ODM.
 
+> [!TIP]
 > ⚙️ **To connect to the database** after forking the project:
 > 1. Create a `.env` file inside the `server/` folder.
 > 2. Add the following line:
@@ -57,7 +59,7 @@ The backend is built with **Node.js**, **Express**, and now includes **MongoDB p
 
 ---
 
-#### 🚀 Performance Optimization with PM2
+### 🚀 Performance Optimization with PM2
 
 To simulate multi-core performance and handle load efficiently, the backend supports **PM2 Clustering**.
 
@@ -111,6 +113,7 @@ The History section now features real-time data from **SpaceX launches** using t
 ## Populated SpaceX Launch History: Demo 
 ![SpaceX Demo](images/demo-launch-history.gif) 
 
+> [!TIP]
 > This integration allows you to explore real historical space launches alongside your custom scheduled ones. Super cool if you love spaceflight history as much as I do! 😄
 
 ---
@@ -127,6 +130,7 @@ To verify persistence, here are sample screenshots from the live MongoDB Atlas d
 
 ![MongoDB Planets Collection](images/mongo-planets.png)
 
+> [!TIP]
 > These screenshots reflect real-time data stored in MongoDB using Mongoose models. API operations such as GET, POST, and DELETE update these collections directly.  
 > Also everything here is mock data, and there's no sensitive information exposed. I always double-check what I upload to make sure it's safe and clean before committing or sharing.😄
 
