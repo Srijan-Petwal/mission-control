@@ -10,6 +10,18 @@ Mission Control is a full-stack web application focused on simulating space miss
 ### 🌐 Live Demo
 
 <!-- Replace with actual GIF or hosted link -->
+he project is now **deployed on an AWS EC2 instance** using a **Docker container**, making it easy to run the full stack without installing Node.js, MongoDB, or dependencies locally.  
+
+- **Backend & Frontend** are running inside a single Docker container.  
+- **Port 8000** is exposed and mapped to the EC2 public IP.  
+- The app is accessible publicly (once the security group allows inbound traffic on port 8000).  
+
+🚀 **Access the live demo here:** [mission-control](http://13.60.62.153:8000/) <!-- Replace # with your EC2 public URL, e.g., http://<your-ec2-ip>:8000 -->
+
+> [!TIP]
+ The container is configured with `--restart=always` for automatic recovery after instance reboots.
+
+
 ![Working Demo](images/demo.gif)
 
 ---
