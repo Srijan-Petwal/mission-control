@@ -180,7 +180,6 @@ Inspired by real-world space mission control systems and modern backend architec
 
 - [x] Add MongoDB data persistence with Mongoose  
 - [x] Integrate SpaceX Launch History API  
-- [ ] Add authentication and security features  
 - [ ] Redesign frontend UI from scratch  
 - [ ] Add unit and integration tests  
 - [ ] Improve error handling and validation  
